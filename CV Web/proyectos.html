@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Proyectos - Santiago Papale
+    </title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="proyectos.css">
+
+    <!-- FUENTE -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- HEADER -->
+    <!-- ========================= -->
+
+    <header>
+
+        <h1>
+            Crónicas de Desarrollo
+        </h1>
+
+        <p class="subtitulo">
+            Registro de proyectos y experiencias en programación
+        </p>
+
+        <nav>
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+            <a href="index.html#sobre-mi">
+                Sobre mí
+            </a>
+
+            <a href="index.html#habilidades">
+                Habilidades
+            </a>
+
+            <a href="proyectos.html">
+                Proyectos
+            </a>
+
+            <a href="index.html#contacto">
+                Contacto
+            </a>
+
+        </nav>
+
+    </header>
+
+    <!-- ========================= -->
+    <!-- MAIN -->
+    <!-- ========================= -->
+
+    <main>
+
+        <section id="proyectos" class="card">
+
+            <div class="titulo-seccion">
+
+                <h2>
+                    Archivo de Proyectos
+                </h2>
+
+                <p class="descripcion-seccion">
+
+                    Proyectos desarrollados durante mi formación
+                    técnica y aprendizaje en programación,
+                    diseño web y desarrollo de videojuegos.
+
+                </p>
+
+            </div>
+
+            <!-- ========================= -->
+            <!-- SUPER PABLO I -->
+            <!-- ========================= -->
+
+            <article class="proyecto">
+
+                <div class="proyecto-header">
+
+                    <h3>
+                        Super Pablo I
+                    </h3>
+
+                    <span class="estado">
+                        Proyecto Escolar
+                    </span>
+
+                </div>
+
+                <p class="descripcion-proyecto">
+
+                    Videojuego desarrollado junto a compañeros
+                    utilizando Unity como práctica de diseño
+                    y desarrollo de videojuegos.
+
+                </p>
+
+                <div class="tecnologias">
+
+                    <span>Java</span>
+                    <span>Diseño de niveles</span>
+                    <span>Trabajo en equipo</span>
+
+                </div>
+
+                <p class="detalle">
+
+                    Proyecto enfocado en creatividad,
+                    lógica básica y desarrollo colaborativo.
+
+                </p>
+
+            </article>
+
+            <!-- ========================= -->
+            <!-- SUPER PABLO II -->
+            <!-- ========================= -->
+
+            <article class="proyecto">
+
+                <div class="proyecto-header">
+
+                    <h3>
+                        Super Pablo II
+                    </h3>
+
+                    <span class="estado">
+                        Secuela
+                    </span>
+
+                </div>
+
+                <p class="descripcion-proyecto">
+
+                    Segunda entrega del proyecto original,
+                    incorporando mejoras visuales,
+                    nuevas mecánicas y expansión de niveles.
+
+                </p>
+
+                <div class="tecnologias">
+
+                    <span>Java</span>
+                    <span>Game Design</span>
+                    <span>Diseño de niveles</span>
+
+                </div>
+
+                <p class="detalle">
+
+                    Participé en el desarrollo y composición
+                    de escenarios utilizando assets externos
+                    y recursos digitales.
+
+                </p>
+
+                <!-- ========================= -->
+                <!-- SLIDER -->
+                <!-- ========================= -->
+
+                <div class="slider">
+
+                    <button class="prev">
+                        &#10094;
+                    </button>
+
+                    <div class="slides">
+
+                        <img src="img/murallas.png"
+                             alt="Murallas del Castillo">
+
+                        <img src="img/bosque-nocturno.png"
+                             alt="Bosque nocturno">
+
+                        <img src="img/sala-juramento.png"
+                             alt="Sala oscura">
+
+                        <img src="img/bosque-gnomo.png"
+                             alt="Bosque Gnomo">
+
+                    </div>
+
+                    <button class="next">
+                        &#10095;
+                    </button>
+
+                </div>
+
+            </article>
+
+            <!-- ========================= -->
+            <!-- JAVA -->
+            <!-- ========================= -->
+
+            <article class="proyecto">
+
+                <div class="proyecto-header">
+
+                    <h3>
+                        Proyectos de Programación en Java
+                    </h3>
+
+                    <span class="estado">
+                        Desarrollo Académico
+                    </span>
+
+                </div>
+
+                <p class="descripcion-proyecto">
+
+                    Desarrollo de múltiples proyectos
+                    realizados junto a compañeros como práctica
+                    de programación orientada a objetos
+                    y lógica computacional.
+
+                </p>
+
+                <div class="tecnologias">
+
+                    <span>Java</span>
+                    <span>Interfaces gráficas</span>
+                    <span>POO</span>
+                    <span>Lógica</span>
+
+                </div>
+
+                <ul class="lista-proyectos">
+
+                    <li>Arkanoid</li>
+
+                    <li>Pong</li>
+
+                    <li>Space Invaders</li>
+
+                    <li>Calculadora con interfaz gráfica</li>
+
+                </ul>
+
+                <p class="detalle">
+
+                    Estos proyectos permitieron fortalecer
+                    habilidades de resolución de problemas,
+                    programación y trabajo colaborativo.
+
+                </p>
+
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- ========================= -->
+    <!-- FOOTER -->
+    <!-- ========================= -->
+
+    <footer>
+
+        <p>
+            Archivo de Santiago Papale
+        </p>
+
+    </footer>
+
+    <!-- ========================= -->
+    <!-- SCRIPT SLIDER -->
+    <!-- ========================= -->
+
+    <script>
+
+        const slides =
+            document.querySelector(".slides");
+
+        const images =
+            document.querySelectorAll(".slides img");
+
+        const prev =
+            document.querySelector(".prev");
+
+        const next =
+            document.querySelector(".next");
+
+        let index = 0;
+
+        function showSlide(){
+
+            slides.style.transform =
+                `translateX(-${index * 100}%)`;
+        }
+
+        next.addEventListener("click", () => {
+
+            index++;
+
+            if(index >= images.length){
+
+                index = 0;
+            }
+
+            showSlide();
+        });
+
+        prev.addEventListener("click", () => {
+
+            index--;
+
+            if(index < 0){
+
+                index = images.length - 1;
+            }
+
+            showSlide();
+        });
+
+    </script>
+
+</body>
+</html>
+
