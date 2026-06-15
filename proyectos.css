@@ -1,0 +1,361 @@
+/* ========================= */
+/* CONFIG GENERAL */
+/* ========================= */
+
+/* Importamos Cinzel para heráldica y Hubot Sans para lectura limpia y profesional */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Hubot+Sans:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hubot Sans', sans-serif;
+    color: #e2dcce;
+    line-height: 1.7;
+
+    /* FONTO PERSONALIZADO: Textura de Cripta Pixel-Pattern */
+    background:
+        /* Mantenemos las capas de oscuridad profesionales arriba */
+        linear-gradient(
+            rgba(8, 8, 12, 0.50),
+            rgba(12, 12, 18, 0.60)
+        ),
+        /* TU NIVEL COMO TEXTURA */
+        url("img/fondoCV.jpeg"); /* Asegurate de usar el nombre de archivo correcto si la descargas */
+    
+    background-position: center;
+    background-attachment: fixed;
+    /* Ajustes para que la textura se repita como mosaico (pattern tiling) */
+    background-repeat: repeat; 
+    background-size: initial; /* Esto es vital: no estirar, solo repetir */
+}
+
+/* Forzamos que los títulos usen la fuente de fantasía */
+h1, h2, h3, h4, .subtitulo, nav a, .estado, .tecnologias span {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 1px;
+}
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: rgba(5, 5, 8, 0.65);
+    /* Borde sutil de bronce antiguo */
+    border-bottom: 1px solid rgba(175, 145, 100, 0.2);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+header h1 {
+    font-size: 3.2rem;
+    color: #c9af88; /* Oro viejo / Bronce desgastado */
+    margin-bottom: 15px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 15px rgba(201, 175, 136, 0.15);
+}
+
+.subtitulo {
+    color: #8c93a0; /* Gris ceniza, como la bruma nocturna */
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+/* ========================= */
+/* NAV */
+/* ========================= */
+
+nav a {
+    color: #a39e93;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 0.9rem;
+    transition: all 0.4s ease;
+}
+
+nav a:hover {
+    color: #c9af88;
+    text-shadow: 0 0 8px rgba(201, 175, 136, 0.4);
+}
+
+/* ========================= */
+/* MAIN */
+/* ========================= */
+
+main {
+    padding: 60px 20px;
+}
+
+/* ========================= */
+/* CARD */
+/* ========================= */
+
+.card {
+    width: 85%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 45px;
+    border-radius: 4px; /* Esquinas casi rectas, dan aspecto de piedra tallada/fortaleza */
+    
+    /* Gradiente mineral profundo y frío en vez de marrón */
+    background:
+        linear-gradient(
+            rgba(14, 14, 19, 0.96),
+            rgba(9, 9, 12, 0.98)
+        );
+    border: 1px solid rgba(175, 145, 100, 0.15);
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.85),
+        inset 0 0 30px rgba(0, 0, 0, 0.8);
+}
+
+/* ========================= */
+/* TITULOS SECCION */
+/* ========================= */
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.titulo-seccion h2 {
+    color: #c9af88;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    display: inline-block;
+    border-bottom: 1px solid rgba(175, 145, 100, 0.2);
+    padding-bottom: 8px;
+}
+
+.descripcion-seccion {
+    color: #9c9689;
+    font-size: 0.95rem;
+}
+
+/* ========================= */
+/* PROYECTOS (Diseño de Niveles) */
+/* ========================= */
+
+.proyecto {
+    margin-top: 35px;
+    padding: 35px;
+    border-radius: 4px; /* Arquitectura sólida */
+    
+    /* Fondo gris pizarra/oscuro, simulando piedra de calabozo */
+    background:
+        linear-gradient(
+            rgba(20, 20, 26, 0.85),
+            rgba(13, 13, 18, 0.95)
+        );
+    border: 1px solid rgba(175, 145, 100, 0.12);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+/* Al pasar el mouse, el bloque brilla con el cian místico de tus runas y portales */
+.proyecto:hover {
+    transform: translateY(-4px);
+    border-color: rgba(92, 225, 230, 0.4);
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.8),
+        0 0 20px rgba(92, 225, 230, 0.08);
+}
+
+/* ========================= */
+/* HEADER PROYECTO */
+/* ========================= */
+
+.proyecto-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.proyecto-header h3 {
+    color: #dfcfb7; /* Tono pergamino noble */
+    font-size: 1.5rem;
+}
+
+/* ========================= */
+/* ESTADO (Ej: "Completado" o "En Desarrollo") */
+/* ========================= */
+
+.estado {
+    padding: 6px 14px;
+    border-radius: 2px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    background: rgba(175, 145, 100, 0.08);
+    border: 1px solid rgba(175, 145, 100, 0.25);
+    color: #c9af88;
+}
+
+/* ========================= */
+/* TEXTO */
+/* ========================= */
+
+.descripcion-proyecto,
+.detalle {
+    color: #b5b0a3;
+    font-size: 0.95rem;
+    margin-bottom: 18px;
+}
+
+/* ========================= */
+/* TECNOLOGIAS (Cajas Rúnicas) */
+/* ========================= */
+
+.tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.tecnologias span {
+    padding: 8px 14px;
+    border-radius: 2px;
+    background: rgba(15, 15, 20, 0.8);
+    border: 1px solid rgba(175, 145, 100, 0.2);
+    color: #a8b070; /* Verde oliva/rúnico apagado de la vegetación del bosque gnomo */
+    font-size: 0.8rem;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    transition: 0.3s ease;
+}
+
+/* Si el proyecto está en hover, las tecnologías toman el cian mágico */
+.proyecto:hover .tecnologias span {
+    color: #5ce1e6;
+    border-color: rgba(92, 225, 230, 0.25);
+}
+
+/* ========================= */
+/* LISTA */
+/* ========================= */
+
+.lista-proyectos {
+    margin-left: 20px;
+    margin-bottom: 25px;
+    color: #b5b0a3;
+    font-size: 0.95rem;
+}
+
+.lista-proyectos li {
+    margin-bottom: 12px;
+}
+
+/* Estilo para los puntitos de la lista (bullets) */
+.lista-proyectos li::marker {
+    color: #c9af88;
+}
+
+/* ========================= */
+/* SLIDER (Donde van tus mapas/capturas) */
+/* ========================= */
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+    border-radius: 2px; /* Alineado con la estética de piedra */
+    border: 1px solid rgba(175, 145, 100, 0.15);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.7);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slides img {
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+    /* Un filtro sutil para que las imágenes se integren orgánicamente al ambiente oscuro */
+    filter: brightness(0.9) contrast(1.05); 
+}
+
+/* BOTONES DEL SLIDER */
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(10, 10, 15, 0.75);
+    color: #c9af88;
+    border: 1px solid rgba(175, 145, 100, 0.2);
+    padding: 12px 18px;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    z-index: 10;
+    backdrop-filter: blur(2px);
+}
+
+.prev:hover,
+.next:hover {
+    background: rgba(15, 23, 30, 0.9);
+    color: #5ce1e6; /* Brillo de runa al interactuar */
+    border-color: rgba(92, 225, 230, 0.5);
+    box-shadow: 0 0 10px rgba(92, 225, 230, 0.3);
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer {
+    text-align: center;
+    padding: 40px;
+    margin-top: 60px;
+    background: rgba(4, 4, 6, 0.85);
+    color: #706b61;
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    border-top: 1px solid rgba(175, 145, 100, 0.1);
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width:768px){
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .card {
+        width: 92%;
+        padding: 30px 20px;
+    }
+
+    .proyecto {
+        padding: 25px 20px;
+    }
+
+    .proyecto-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px 12px;
+    }
+}

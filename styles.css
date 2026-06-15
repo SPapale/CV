@@ -1,0 +1,238 @@
+/* Importamos fuentes medievales/profesionales de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Hubot+Sans:wght@300;400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Hubot Sans', sans-serif;
+    color: #e2dcce;
+    line-height: 1.7;
+
+    /* FONTO PERSONALIZADO: Textura de Cripta Pixel-Pattern */
+    background:
+        /* Mantenemos las capas de oscuridad profesionales arriba */
+        linear-gradient(
+            rgba(8, 8, 12, 0.50),
+            rgba(12, 12, 18, 0.60)
+        ),
+        /* TU NIVEL COMO TEXTURA */
+        url("img/fondoCV.jpeg"); /* Asegurate de usar el nombre de archivo correcto si la descargas */
+    
+    background-position: center;
+    background-attachment: fixed;
+    /* Ajustes para que la textura se repita como mosaico (pattern tiling) */
+    background-repeat: repeat; 
+    background-size: initial; /* Esto es vital: no estirar, solo repetir */
+}
+
+/* TÍTULOS CON ESTILO SOBERANO */
+h1, h2, h3, h4 {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 1px;
+}
+
+/* HEADER (La entrada al castillo) */
+header {
+    text-align: center;
+    padding: 50px 20px;
+    /* Borde inferior estilo bronce viejo/desgastado */
+    border-bottom: 1px solid rgba(172, 142, 97, 0.25);
+    background-color: rgba(7, 7, 9, 0.6);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+header h1 {
+    font-size: 3.2rem;
+    /* Color Oro Desgastado / Bronce */
+    color: #c5a880; 
+    text-shadow: 0 0 15px rgba(197, 168, 128, 0.2);
+    margin-bottom: 12px;
+}
+
+.subtitulo {
+    font-family: 'Cinzel', serif;
+    color: #8f96a3; /* Gris ceniza, bien dark fantasy */
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+nav a {
+    color: #9f998a;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin: 0 20px;
+    transition: all 0.4s ease;
+}
+
+nav a:hover {
+    color: #c5a880;
+    /* Destello sutil al pasar el mouse */
+    text-shadow: 0 0 8px rgba(197, 168, 128, 0.5);
+}
+
+/* HERO (Introducción) */
+.hero {
+    min-height: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-texto {
+    background-color: rgba(12, 12, 16, 0.75);
+    padding: 45px;
+    /* Menos redondeado para mantener el aspecto arquitectónico y gótico */
+    border-radius: 4px; 
+    max-width: 750px;
+    border: 1px solid rgba(172, 142, 97, 0.2);
+    /* Sombra interna para dar profundidad de mazmorra o piedra */
+    box-shadow: 
+        inset 0 0 20px rgba(0, 0, 0, 0.8),
+        0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.hero h2 {
+    font-size: 2.2rem;
+    color: #c5a880;
+    margin-bottom: 20px;
+}
+
+/* SECCIONES / CARDS (Bloques de piedra del pergamino) */
+.card {
+    width: 90%;
+    max-width: 950px;
+    margin: 50px auto;
+    /* Fondo oscuro mineral */
+    background-color: rgba(14, 14, 18, 0.9);
+    padding: 40px;
+    border-radius: 4px;
+    /* Borde sutil */
+    border: 1px solid rgba(172, 142, 97, 0.15);
+    /* Sombras densas y un tinte violeta/nigromante casi imperceptible en el fondo */
+    box-shadow: 
+        0 15px 35px rgba(0,0,0,0.8),
+        0 0 30px rgba(100, 70, 120, 0.03); 
+    transition: border-color 0.4s ease;
+}
+
+/* Al pasar el mouse por una sección, se ilumina tímidamente */
+.card:hover {
+    border-color: rgba(172, 142, 97, 0.3);
+}
+
+.card h2 {
+    color: #c5a880;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    border-bottom: 1px solid rgba(172, 142, 97, 0.15);
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+/* SKILLS (Cajas rúnicas) */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill-box {
+    /* Color oscuro de fondo para que resalte el texto */
+    background-color: rgba(20, 20, 25, 0.8);
+    /* Borde rúnico apagado */
+    border: 1px solid rgba(172, 142, 97, 0.25);
+    padding: 10px 20px;
+    border-radius: 2px;
+    color: #d1ca77; /* Un tono verde/amarillo rúnico apagado */
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.5);
+}
+
+/* El hover emula el brillo cian de las runas que pusiste en 'sala-juramento.png' */
+.skill-box:hover {
+    transform: translateY(-2px);
+    background-color: rgba(15, 23, 30, 0.9);
+    color: #5ce1e6; /* Cian místico de tus mapas */
+    border-color: rgba(92, 225, 230, 0.6);
+    box-shadow: 0 0 12px rgba(92, 225, 230, 0.25);
+}
+
+/* PROYECTOS (Tus diseños de niveles) */
+.proyecto {
+    margin-bottom: 35px;
+    padding-left: 15px;
+    /* Línea lateral que simula un códice o pergamino */
+    border-left: 2px solid rgba(172, 142, 97, 0.2);
+}
+
+.proyecto h3 {
+    color: #dfcfb7;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+.proyecto a {
+    color: #5ce1e6; /* Enlace color cian mágico para contrastar bien con el fondo oscuro */
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.proyecto a:hover {
+    color: #c5a880;
+    text-shadow: 0 0 5px rgba(197, 168, 128, 0.3);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    border-top: 1px solid rgba(172, 142, 97, 0.1);
+    background-color: rgba(5, 5, 7, 0.8);
+    margin-top: 60px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px){
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .card {
+        padding: 25px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    nav a {
+        margin: 5px 0;
+    }
+}
